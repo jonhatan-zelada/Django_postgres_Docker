@@ -1,0 +1,9 @@
+docker-compose run django django-admin startproject core .
+docker-compose up
+
+docker exec -it django bash
+
+docker exec -it postgres psql -U postgres
+
+python manage.py migrate
+python manage.py createsuperuser
